@@ -222,7 +222,7 @@ export default function Hero() {
             lg:text-8xl
           "
         >
-          Building digital
+          Creating
           <span
             className="
               block
@@ -234,7 +234,7 @@ export default function Hero() {
               text-transparent
             "
           >
-            experiences.
+            what's next.
           </span>
         </motion.h1>
 
@@ -253,8 +253,7 @@ export default function Hero() {
             sm:leading-8
           "
         >
-          Hi, I'm Nikita. I create fast, scalable and beautiful web
-          experiences with WordPress and modern web technologies.
+          Hi, I'm Nikita. I create fast, scalable, and beautiful web experiences with WordPress and modern web technologies—built with purpose, crafted for today, and ready for what's next.
         </motion.p>
 
         {/* CTA */}
