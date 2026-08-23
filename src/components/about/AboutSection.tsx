@@ -14,7 +14,7 @@ const stats = [
   },
   {
     value: "∞",
-    label: "Curiosity to build",
+    label: "Always learning",
   },
 ];
 
@@ -34,9 +34,9 @@ export default function AboutSection() {
               </p>
 
               <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-                Building for the web,
-                <span className="block text-white/40">
-                  with intention.
+                Building with purpose,
+                <span className="block text-white/55">
+                  growing with every project.
                 </span>
               </h2>
 
@@ -47,17 +47,11 @@ export default function AboutSection() {
             {/* RIGHT */}
             <div className="space-y-10">
               <p className="max-w-3xl text-xl leading-9 text-white/70">
-                I'm Nikita, a WordPress Developer focused on
-                creating fast, scalable and thoughtful digital
-                experiences.
+                WordPress Developer focused on creating fast, scalable, and thoughtful digital experiences.
               </p>
 
-              <p className="max-w-2xl text-base leading-8 text-white/40">
-                I work across custom WordPress development,
-                theme and plugin customization, REST APIs and
-                modern frontend technologies. I enjoy turning
-                designs and ideas into reliable products that
-                are easy to maintain and built to perform.
+              <p className="max-w-2xl text-base leading-8 text-white/55">
+                I work across custom WordPress development, theme and plugin customization, REST APIs, and modern frontend technologies. I enjoy turning ideas and designs into reliable digital products—built with intention, designed to grow, and made to last.
               </p>
 
               {/* Stats */}
@@ -108,7 +102,7 @@ export default function AboutSection() {
                       text-[10px]
                       uppercase
                       tracking-[0.18em]
-                      text-white/35
+                      text-white/50
                       sm:text-xs
                     ">
                       {stat.label}
@@ -117,14 +111,7 @@ export default function AboutSection() {
                 ))}
               </div>
 
-              {/* Small technology line */}
-              <div className="flex flex-wrap gap-x-5 gap-y-2 pt-2 text-xs uppercase tracking-[0.18em] text-white/25">
-                <span>WordPress</span>
-                <span>PHP</span>
-                <span>Laravel</span>
-                <span>React</span>
-                <span>Next.js</span>
-              </div>
+             
             </div>
           </div>
         </div>

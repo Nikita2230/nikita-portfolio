@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import {
+  Manrope,
+  Cormorant_Garamond,
+} from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +37,19 @@ export const metadata: Metadata = {
       "WordPress Developer building fast, scalable and thoughtful digital experiences.",
   },
 };
+const manrope = Manrope({
+  subsets: ["latin"],
+  variable: "--font-manrope",
+  display: "swap",
+});
 
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-cormorant",
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,7 +57,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>{children}</body>
     </html>
   );
 }

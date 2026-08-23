@@ -180,8 +180,9 @@ export default function Hero() {
 </a>
 
 <a
-  href="#"
-  aria-label="LinkedIn"
+  href="https://www.linkedin.com/in/nikitapatel2295/"
+  aria-label="LinkedIn" target="_blank"
+  rel="noreferrer"
   className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-zinc-300 backdrop-blur transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
 >
   in
@@ -204,7 +205,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-6 text-xs font-medium uppercase tracking-[0.45em] text-purple-300 sm:text-sm"
+          className="mb-6 text-xs font-medium uppercase tracking-[0.45em] text-purple-300/90 sm:text-sm"
         >
           WordPress Developer
         </motion.p>
@@ -336,7 +337,7 @@ export default function Hero() {
           flex-col
           items-center
           gap-3
-          text-zinc-500
+          text-zinc-400
           transition
           hover:text-purple-300
           sm:flex

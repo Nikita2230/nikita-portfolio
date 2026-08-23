@@ -2,75 +2,105 @@
 
 import { motion } from "framer-motion";
 
-const skillGroups = [
+const eras = [
   {
     number: "01",
-    title: "WordPress & CMS",
-    skills: [
-      "WordPress",
-      "Custom Themes",
-      "Custom Plugins",
-      "WooCommerce",
-      "Elementor",
-      "ACF",
-      "Gutenberg",
-    ],
+    label: "BEGINNING",
+    title: "Where it started.",
+    description:
+      "The foundation that shaped how I think, build, and solve problems.",
+    skills: ["WordPress", "PHP", "HTML", "CSS"],
   },
   {
     number: "02",
-    title: "Backend & APIs",
-    skills: [
-      "PHP",
-      "Laravel",
-      "REST API",
-      "MySQL",
-      "Custom Integrations",
-    ],
+    label: "GROWTH",
+    title: "Where I grew.",
+    description:
+      "Tools and technologies that helped me turn ideas into more capable digital experiences.",
+    skills: ["WooCommerce", "Elementor", "Divi", "WPBakery"],
   },
   {
     number: "03",
-    title: "Frontend & Tools",
-    skills: [
-      "JavaScript",
-      "React",
-      "Next.js",
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "Git",
-    ],
+    label: "NEXT",
+    title: "Where I'm going.",
+    description:
+      "Modern technologies that keep me learning, experimenting, and building what's next.",
+    skills: ["React", "Next.js", "REST API", "Headless WordPress"],
   },
 ];
 
-const experience = [
-  {
-    year: "01",
-    title: "WordPress Development",
-    description:
-      "Custom WordPress themes, plugins, CPTs, taxonomies, WooCommerce and complex WordPress integrations.",
-  },
-  {
-    year: "02",
-    title: "Backend & APIs",
-    description:
-      "PHP, Laravel, REST APIs and custom integrations designed for maintainability and performance.",
-  },
-  {
-    year: "03",
-    title: "Modern Frontend",
-    description:
-      "React, Next.js, JavaScript and headless WordPress architectures for modern web experiences.",
-  },
-];
+const skillIcons: Record<string, string> = {
+  WordPress: "https://cdn.simpleicons.org/wordpress/ffffff",
+  PHP: "https://cdn.simpleicons.org/php/ffffff",
+  HTML: "https://cdn.simpleicons.org/html5/ffffff",
+  CSS: "https://cdn.simpleicons.org/css/ffffff",
+  WooCommerce: "https://cdn.simpleicons.org/woocommerce/ffffff",
+  Elementor: "https://cdn.simpleicons.org/elementor/ffffff",
+  Divi: "D",
+  WPBakery: "W",
+  React: "https://cdn.simpleicons.org/react/ffffff",
+  "Next.js": "https://cdn.simpleicons.org/nextdotjs/ffffff",
+  "REST API": "</>",
+  "Headless WordPress": "W",
+};
+
+function SkillBadge({ skill }: { skill: string }) {
+  const icon = skillIcons[skill];
+
+  return (
+    <div
+      className="
+        group
+        flex
+        items-center
+        gap-3
+        rounded-full
+        border
+        border-white/[0.08]
+        bg-white/[0.025]
+        px-4
+        py-2.5
+        transition-all
+        duration-300
+        hover:border-purple-400/30
+        hover:bg-purple-500/[0.06]
+      "
+    >
+      <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/[0.08] bg-white/[0.035] p-1.5 text-[10px] font-semibold text-purple-300">
+        {icon?.startsWith("http") ? (
+          <img
+            src={icon}
+            alt=""
+            className="h-full w-full object-contain"
+            draggable={false}
+          />
+        ) : (
+          icon
+        )}
+      </span>
+
+      <span className="text-sm text-white/50 transition-colors duration-300 group-hover:text-white/80">
+        {skill}
+      </span>
+    </div>
+  );
+}
 
 export default function ExperienceSection() {
   return (
     <section
-      id="experience"
+      id="skills"
       className="relative overflow-hidden px-6 py-32"
     >
-      <div className="mx-auto max-w-6xl">
-        {/* Heading */}
+      {/* Background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute left-[20%] top-[25%] h-[400px] w-[400px] rounded-full bg-purple-600/[0.035] blur-[120px]" />
+
+        <div className="absolute right-[10%] bottom-[10%] h-[350px] w-[350px] rounded-full bg-fuchsia-500/[0.025] blur-[120px]" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl">
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,163 +109,116 @@ export default function ExperienceSection() {
           className="mb-20 max-w-2xl"
         >
           <p className="text-sm uppercase tracking-[0.3em] text-purple-300">
-            Experience
+            Skills
           </p>
 
           <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-            Built across
+            Different tools.
             <span className="block text-white/40">
-              the modern web.
+              One journey.
             </span>
           </h2>
+
+          <p className="mt-6 max-w-xl text-sm leading-7 text-white/35">
+            Everything I've learned along the way becomes part of what
+            I build next.
+          </p>
         </motion.div>
 
-        {/* Experience List */}
-        <div className="border-t border-white/10">
-          {experience.map((item, index) => (
-            <motion.div
-              key={item.year}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{
-                duration: 0.6,
-                delay: index * 0.1,
-              }}
-              className="
-                group
-                grid gap-6
-                border-b border-white/10
-                py-10
-                transition-colors duration-300
-                hover:bg-white/[0.015]
-                md:grid-cols-[100px_1fr]
-                md:px-4
-              "
-            >
-              {/* Number */}
-              <div>
-                <span className="text-sm tracking-[0.2em] text-purple-300/70">
-                  {item.year}
-                </span>
-              </div>
+        {/* Timeline */}
+        <div className="relative">
+          {/* Connecting line */}
+          <div className="pointer-events-none absolute left-[58px] top-12 hidden h-[calc(100%-64px)] w-px bg-gradient-to-b from-purple-400/40 via-purple-400/10 to-transparent md:block" />
 
-              {/* Content */}
-              <div className="relative">
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                  <h3 className="text-2xl font-medium tracking-tight text-white transition-colors duration-300 group-hover:text-purple-200">
-                    {item.title}
-                  </h3>
-
-                  <span
-                    className="
-                      hidden
-                      h-9
-                      w-9
-                      shrink-0
-                      items-center
-                      justify-center
-                      rounded-full
-                      border
-                      border-white/10
-                      text-white/40
-                      transition-all
-                      duration-300
-                      group-hover:border-purple-400/40
-                      group-hover:text-purple-300
-                      sm:flex
-                    "
-                  >
-                    ↗
-                  </span>
-                </div>
-
-                <p className="mt-4 max-w-3xl text-sm leading-7 text-white/40 transition-colors duration-300 group-hover:text-white/55">
-                  {item.description}
-                </p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Skills */}
-        <motion.div
-          id="skills"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.7 }}
-          className="mt-32"
-        >
-          <div className="mb-10">
-            <p className="text-sm uppercase tracking-[0.3em] text-purple-300">
-              Skills
-            </p>
-
-            <h3 className="mt-4 text-3xl font-semibold tracking-tight text-white">
-              Tools I use to build.
-            </h3>
-          </div>
-
-          <div className="grid gap-px overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 md:grid-cols-3">
-            {skillGroups.map((group, index) => (
-              <motion.div
-                key={group.number}
-                initial={{ opacity: 0, y: 25 }}
+          <div className="space-y-6">
+            {eras.map((era, index) => (
+              <motion.article
+                key={era.number}
+                initial={{ opacity: 0, y: 35 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.15 }}
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.1,
+                  duration: 0.6,
+                  delay: index * 0.12,
                 }}
                 className="
                   group
-                  bg-black
-                  p-7
-                  transition-colors
-                  duration-300
-                  hover:bg-white/[0.025]
-                  sm:p-9
+                  relative
+                  overflow-hidden
+                  rounded-[2rem]
+                  border
+                  border-white/[0.08]
+                  bg-white/[0.015]
+                  px-6
+                  py-8
+                  transition-all
+                  duration-500
+                  hover:border-purple-400/20
+                  hover:bg-purple-500/[0.025]
+                  md:grid
+                  md:grid-cols-[100px_1fr]
+                  md:px-10
+                  md:py-10
                 "
               >
-                <div className="flex items-center justify-between">
-                  <span className="text-xs tracking-[0.25em] text-purple-300/60">
-                    {group.number}
-                  </span>
-
-                  <span className="text-xs text-white/20">
-                    {String(group.skills.length).padStart(2, "0")}
-                  </span>
+                {/* Number */}
+                <div className="relative z-10 flex items-start">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full border border-purple-400/20 bg-black text-xs tracking-[0.15em] text-purple-300">
+                    {era.number}
+                  </div>
                 </div>
 
-                <h4 className="mt-10 text-xl font-medium text-white">
-                  {group.title}
-                </h4>
+                {/* Content */}
+                <div>
+                  <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-purple-300/55">
+                        {era.label}
+                      </p>
 
-                <div className="mt-7 space-y-3">
-                  {group.skills.map((skill) => (
-                    <div
-                      key={skill}
-                      className="
-                        flex
-                        items-center
-                        gap-3
-                        text-sm
-                        text-white/45
-                        transition-colors
-                        duration-200
-                        hover:text-white
-                      "
-                    >
-                      <span className="h-1 w-1 rounded-full bg-purple-400/70" />
-
-                      {skill}
+                      <h3 className="mt-3 text-2xl font-medium tracking-tight text-white sm:text-3xl">
+                        {era.title}
+                      </h3>
                     </div>
-                  ))}
+
+                    <span className="hidden font-serif text-3xl italic text-white/[0.08] transition-colors duration-300 group-hover:text-purple-300/[0.18] sm:block">
+                      {era.number}
+                    </span>
+                  </div>
+
+                  <p className="mt-5 max-w-2xl text-sm leading-7 text-white/35">
+                    {era.description}
+                  </p>
+
+                  {/* Skills */}
+                  <div className="mt-7 flex flex-wrap gap-2.5">
+                    {era.skills.map((skill) => (
+                      <SkillBadge
+                        key={skill}
+                        skill={skill}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </motion.div>
+
+                {/* Hover glow */}
+                <div className="pointer-events-none absolute -right-20 -top-20 h-40 w-40 rounded-full bg-purple-500/[0.06] blur-3xl transition-opacity duration-500 group-hover:opacity-100" />
+              </motion.article>
             ))}
           </div>
+        </div>
+
+        {/* Closing line */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-20 text-center"
+        >
+          <p className="font-editorial-italic text-2xl text-purple-200/70">
+            Still growing. Still building. Still becoming.
+          </p>
         </motion.div>
       </div>
     </section>

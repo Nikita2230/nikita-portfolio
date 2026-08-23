@@ -21,7 +21,7 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), sans-serif;
 }
 body::before {
   content: "";
@@ -60,4 +60,13 @@ body::before {
       rgba(76, 29, 149, 0.12),
       transparent 35%
     );
+}
+
+.font-editorial {
+  font-family: var(--font-cormorant), serif;
+}
+
+.font-editorial-italic {
+  font-family: var(--font-cormorant), serif;
+  font-style: italic;
 }

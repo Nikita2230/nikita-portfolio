@@ -1,27 +1,39 @@
 const services = [
   {
     number: "01",
-    title: "WordPress Development",
+    title: "Custom WordPress",
     description:
-      "Custom WordPress websites, themes, plugins and content architectures built around your requirements.",
+      "Custom themes, plugins, content structures and functionality built around your requirements.",
   },
   {
     number: "02",
-    title: "Headless WordPress",
+    title: "WooCommerce",
     description:
-      "Modern WordPress backends connected to React and Next.js frontends through REST APIs.",
+      "Custom stores, checkout flows, payment integrations and WooCommerce functionality.",
   },
   {
     number: "03",
-    title: "Website Development",
+    title: "Design to WordPress",
     description:
-      "Responsive, accessible and performance-focused websites built from designs or ideas.",
+      "Responsive WordPress builds from Figma or existing designs using custom code or page builders.",
   },
   {
     number: "04",
+    title: "Headless & APIs",
+    description:
+      "WordPress backends connected to React and Next.js frontends through REST APIs.",
+  },
+  {
+    number: "05",
     title: "Custom Integrations",
     description:
-      "Third-party APIs, forms, payments and custom functionality integrated into existing websites.",
+      "Third-party APIs, forms, payments and custom features integrated into existing websites.",
+  },
+  {
+    number: "06",
+    title: "Performance & Care",
+    description:
+      "Speed optimization, troubleshooting, updates and ongoing WordPress maintenance.",
   },
 ];
 
@@ -29,81 +41,222 @@ export default function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative px-6 py-32"
+      className="relative overflow-hidden px-6 py-32"
     >
-      <div className="mx-auto max-w-6xl">
+      {/* Subtle background glow */}
+      <div
+        className="
+          pointer-events-none
+          absolute
+          left-1/2
+          top-1/2
+          h-[500px]
+          w-[700px]
+          -translate-x-1/2
+          -translate-y-1/2
+          rounded-full
+          bg-purple-600/[0.04]
+          blur-[130px]
+        "
+      />
 
-        <div className="grid gap-16 lg:grid-cols-[0.7fr_1.3fr]">
+      <div className="relative mx-auto max-w-6xl">
+        {/* Heading */}
+        <div className="mb-14 max-w-2xl">
+          <p
+            className="
+              text-sm
+              uppercase
+              tracking-[0.3em]
+              text-purple-300
+            "
+          >
+            Services
+          </p>
 
-          {/* Heading */}
-          <div>
-            <p className="text-sm uppercase tracking-[0.3em] text-purple-300">
-              Services
-            </p>
+          <h2
+            className="
+              mt-5
+              text-4xl
+              font-semibold
+              tracking-tight
+              text-white
+              sm:text-5xl
+            "
+          >
+            Built for
+            <span
+              className="
+                block
+                bg-gradient-to-r
+                from-purple-300
+                via-purple-400
+                to-fuchsia-400
+                bg-clip-text
+                text-transparent
+              "
+            >
+              every chapter.
+            </span>
+          </h2>
 
-            <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
-              From idea
-              <span className="block text-white/40">
-                to execution.
-              </span>
-            </h2>
-          </div>
+          <p
+            className="
+              mt-5
+              max-w-lg
+              text-sm
+              leading-7
+              text-white/35
+            "
+          >
+            From the first idea to what comes next — thoughtful
+            development for every stage of your website.
+          </p>
+        </div>
 
-          {/* Services */}
-          <div className="border-t border-white/10">
-
-            {services.map((service) => (
-              <div
-                key={service.number}
-                className="
-                  group
-                  grid gap-5
-                  border-b border-white/10
-                  py-8
-                  md:grid-cols-[70px_1fr]
-                "
-              >
-
-                <span className="
-                  text-sm
-                  tracking-[0.2em]
-                  text-purple-300/60
-                  transition-colors
-                  group-hover:text-purple-300
-                ">
+        {/* Compact service grid */}
+        <div
+          className="
+            grid
+            overflow-hidden
+            rounded-[1.75rem]
+            border
+            border-white/[0.08]
+            bg-white/[0.08]
+            gap-px
+            sm:grid-cols-2
+            lg:grid-cols-3
+          "
+        >
+          {services.map((service) => (
+            <article
+              key={service.number}
+              className="
+                group
+                relative
+                min-h-[190px]
+                overflow-hidden
+                bg-black
+                p-7
+                transition-colors
+                duration-500
+                hover:bg-purple-500/[0.035]
+              "
+            >
+              {/* Top */}
+              <div className="flex items-center justify-between">
+                <span
+                  className="
+                    text-[10px]
+                    tracking-[0.3em]
+                    text-purple-300/50
+                    transition-colors
+                    duration-300
+                    group-hover:text-purple-300
+                  "
+                >
                   {service.number}
                 </span>
 
-                <div>
-                  <h3 className="
-                    text-xl
-                    font-medium
-                    text-white
-                    transition-transform
-                    duration-300
-                    group-hover:translate-x-1
-                  ">
-                    {service.title}
-                  </h3>
-
-                  <p className="
-                    mt-3
-                    max-w-xl
-                    text-sm
-                    leading-7
-                    text-white/40
-                  ">
-                    {service.description}
-                  </p>
-                </div>
-
+                {/* Small chapter marker */}
+                <span
+                  className="
+                    h-1.5
+                    w-1.5
+                    rounded-full
+                    bg-purple-400/30
+                    transition-all
+                    duration-500
+                    group-hover:scale-150
+                    group-hover:bg-purple-300
+                    group-hover:shadow-[0_0_12px_rgba(192,132,252,0.8)]
+                  "
+                />
               </div>
-            ))}
 
-          </div>
+              {/* Content */}
+              <h3
+                className="
+                  mt-8
+                  text-lg
+                  font-medium
+                  tracking-tight
+                  text-white/90
+                  transition-colors
+                  duration-300
+                  group-hover:text-purple-200
+                "
+              >
+                {service.title}
+              </h3>
 
+              <p
+                className="
+                  mt-3
+                  max-w-sm
+                  text-sm
+                  leading-6
+                  text-white/35
+                  transition-colors
+                  duration-300
+                  group-hover:text-white/50
+                "
+              >
+                {service.description}
+              </p>
+
+              {/* Hover line */}
+              <span
+                className="
+                  absolute
+                  bottom-0
+                  left-0
+                  h-px
+                  w-0
+                  bg-gradient-to-r
+                  from-purple-500
+                  to-fuchsia-400
+                  transition-all
+                  duration-500
+                  group-hover:w-full
+                "
+              />
+
+              {/* Hover glow */}
+              <div
+                className="
+                  pointer-events-none
+                  absolute
+                  -right-16
+                  -top-16
+                  h-32
+                  w-32
+                  rounded-full
+                  bg-purple-500/[0.07]
+                  opacity-0
+                  blur-3xl
+                  transition-opacity
+                  duration-500
+                  group-hover:opacity-100
+                "
+              />
+            </article>
+          ))}
         </div>
 
+        {/* Closing detail */}
+        <p
+          className="
+            mt-8
+            text-right
+            text-[10px]
+            uppercase
+            tracking-[0.35em]
+            text-purple-300/20
+          "
+        >
+          built to evolve · made to last
+        </p>
       </div>
     </section>
   );

@@ -34,12 +34,15 @@ export default function Footer() {
       </a>
 
       <a
-        href="#contact"
+        href="https://www.linkedin.com/in/nikitapatel2295/"
+        target="_blank"
+        rel="noopener noreferrer"
         className="transition-colors hover:text-white"
       >
-        Contact
+        Linkedin
       </a>
 
+      
       <button
         onClick={() =>
           window.scrollTo({ top: 0, behavior: "smooth" })
