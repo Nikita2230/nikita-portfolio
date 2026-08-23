@@ -24,13 +24,14 @@ const stars = [
   { left: "73%", top: "83%", size: 1 },
 ];
 
-const GithubIcon = () => (
+const WhatsAppIcon = () => (
   <svg
     viewBox="0 0 24 24"
     fill="currentColor"
     aria-hidden="true"
+    className="h-[19px] w-[19px]"
   >
-    <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.41 7.86 10.94.58.11.79-.25.79-.56v-2.17c-3.2.7-3.87-1.54-3.87-1.54-.53-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.75 1.18 1.75 1.18 1.02 1.75 2.68 1.25 3.33.96.1-.74.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .96-.31 3.15 1.18A10.9 10.9 0 0 1 12 5.8c.97 0 1.94.13 2.85.39 2.18-1.49 3.14-1.18 3.14-1.18.62 1.59.23 2.77.12 3.06.73.81 1.17 1.84 1.17 3.1 0 4.43-2.69 5.4-5.25 5.69.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56C20.21 21.41 23.5 17.09 23.5 12 23.5 5.65 18.35.5 12 .5Z" />
+    <path d="M12.04 2C6.52 2 2.03 6.48 2.03 12c0 1.76.46 3.48 1.33 5L2 22l5.12-1.34A9.94 9.94 0 0 0 12.04 22C17.56 22 22 17.52 22 12S17.56 2 12.04 2Zm0 18.18a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.04.8.81-2.96-.2-.31A8.17 8.17 0 0 1 3.86 12c0-4.52 3.67-8.18 8.18-8.18A8.17 8.17 0 0 1 20.18 12c0 4.52-3.63 8.18-8.14 8.18Zm4.49-6.13c-.25-.12-1.47-.73-1.7-.81-.23-.09-.4-.12-.56.12-.17.25-.65.81-.8.98-.15.16-.29.18-.54.06-.25-.13-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.44.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.09s.9 2.42 1.02 2.59c.13.16 1.76 2.69 4.27 3.77.6.26 1.06.41 1.43.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.16-.48-.28Z" />
   </svg>
 );
 
@@ -46,12 +47,12 @@ const LinkedinIcon = () => (
 
 export default function Hero() {
   return (
-    
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-6">
-        <HeroVisual />
-        
+      <HeroVisual />
+
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden">
+
         {/* Main purple glow */}
         <div
           className="
@@ -169,38 +170,95 @@ export default function Hero() {
           lg:flex
         "
       >
+        {/* WhatsApp */}
         <a
-  href="https://github.com/Nikita2230"
-  target="_blank"
-  rel="noreferrer"
-  aria-label="GitHub"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-zinc-300 backdrop-blur transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
->
-  GH
-</a>
+          href="https://wa.me/918237782210"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="WhatsApp"
+          className="
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/5
+            text-zinc-300
+            backdrop-blur
+            transition
+            hover:border-purple-400/40
+            hover:bg-purple-500/10
+            hover:text-white
+          "
+        >
+          <WhatsAppIcon />
+        </a>
 
-<a
-  href="https://www.linkedin.com/in/nikitapatel2295/"
-  aria-label="LinkedIn" target="_blank"
-  rel="noreferrer"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-zinc-300 backdrop-blur transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
->
-  in
-</a>
+        {/* LinkedIn */}
+        <a
+          href="https://www.linkedin.com/in/nikitapatel2295/"
+          aria-label="LinkedIn"
+          target="_blank"
+          rel="noreferrer"
+          className="
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/5
+            text-sm
+            font-semibold
+            text-zinc-300
+            backdrop-blur
+            transition
+            hover:border-purple-400/40
+            hover:bg-purple-500/10
+            hover:text-white
+          "
+        >
+          in
+        </a>
 
-<a
-  href="#contact"
-  aria-label="Email"
-  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-sm font-semibold text-zinc-300 backdrop-blur transition hover:border-purple-400/40 hover:bg-purple-500/10 hover:text-white"
->
-  <Mail size={18} />
-</a>
+        {/* Email */}
+        <a
+          href="#contact"
+          aria-label="Email"
+          className="
+            flex
+            h-11
+            w-11
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-white/10
+            bg-white/5
+            text-sm
+            font-semibold
+            text-zinc-300
+            backdrop-blur
+            transition
+            hover:border-purple-400/40
+            hover:bg-purple-500/10
+            hover:text-white
+          "
+        >
+          <Mail size={18} />
+        </a>
 
         <div className="mt-2 h-16 w-px bg-gradient-to-b from-purple-400 to-transparent" />
       </motion.div>
 
       {/* Hero content */}
       <div className="relative z-10 mx-auto max-w-5xl text-center">
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -224,6 +282,7 @@ export default function Hero() {
           "
         >
           Creating
+
           <span
             className="
               block
@@ -254,7 +313,9 @@ export default function Hero() {
             sm:leading-8
           "
         >
-          Hi, I'm Nikita. I create fast, scalable, and beautiful web experiences with WordPress and modern web technologies—built with purpose, crafted for today, and ready for what's next.
+          Hi, I'm Nikita. I create fast, scalable, and beautiful web
+          experiences with WordPress and modern web technologies—built with
+          purpose, crafted for today, and ready for what's next.
         </motion.p>
 
         {/* CTA */}
@@ -354,7 +415,5 @@ export default function Hero() {
         <ArrowDown size={14} className="animate-bounce" />
       </motion.a>
     </section>
-
-    
   );
 }
