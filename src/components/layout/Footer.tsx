@@ -24,14 +24,7 @@ export default function Footer() {
     <p>© 2026 Nikita Patel</p>
 
     <div className="flex items-center gap-6">
-      <a
-        href="https://github.com/Nikita2230"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="transition-colors hover:text-white"
-      >
-        GitHub
-      </a>
+      
 
       <a
         href="https://www.linkedin.com/in/nikitapatel2295/"
