@@ -252,7 +252,7 @@ export default function ProjectCard({
           className={`
             mt-4
             leading-7
-            text-white/50
+            text-white/60
             ${
               featured
                 ? "max-w-lg text-base"
@@ -276,7 +276,7 @@ export default function ProjectCard({
                     bg-white/[0.03]
                     px-3 py-1.5
                     text-xs
-                    text-white/60
+                    text-white/65
                     transition-colors
                     duration-300
                     group-hover:border-purple-400/20
@@ -368,7 +368,7 @@ export default function ProjectCard({
                     max-w-2xl
                     text-sm
                     leading-7
-                    text-white/50
+                    text-white/60
                   "
                 >
                   {meta.project_work}

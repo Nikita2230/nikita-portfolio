@@ -43,22 +43,36 @@ export default function ServicesSection() {
       id="services"
       className="relative overflow-hidden px-6 py-32"
     >
-      {/* Subtle background glow */}
-      <div
-        className="
-          pointer-events-none
-          absolute
-          left-1/2
-          top-1/2
-          h-[500px]
-          w-[700px]
-          -translate-x-1/2
-          -translate-y-1/2
-          rounded-full
-          bg-purple-600/[0.04]
-          blur-[130px]
-        "
-      />
+      {/* Subtle background atmosphere */}
+      <div className="pointer-events-none absolute inset-0">
+        <div
+          className="
+            absolute
+            left-1/2
+            top-1/2
+            h-[500px]
+            w-[700px]
+            -translate-x-1/2
+            -translate-y-1/2
+            rounded-full
+            bg-purple-600/[0.045]
+            blur-[130px]
+          "
+        />
+
+        <div
+          className="
+            absolute
+            -right-40
+            top-[10%]
+            h-[350px]
+            w-[350px]
+            rounded-full
+            bg-fuchsia-500/[0.025]
+            blur-[120px]
+          "
+        />
+      </div>
 
       <div className="relative mx-auto max-w-6xl">
         {/* Heading */}
@@ -85,6 +99,7 @@ export default function ServicesSection() {
             "
           >
             Built for
+
             <span
               className="
                 block
@@ -106,7 +121,7 @@ export default function ServicesSection() {
               max-w-lg
               text-sm
               leading-7
-              text-white/35
+              text-white/55
             "
           >
             From the first idea to what comes next — thoughtful
@@ -118,12 +133,12 @@ export default function ServicesSection() {
         <div
           className="
             grid
+            gap-px
             overflow-hidden
             rounded-[1.75rem]
             border
-            border-white/[0.08]
-            bg-white/[0.08]
-            gap-px
+            border-white/10
+            bg-white/10
             sm:grid-cols-2
             lg:grid-cols-3
           "
@@ -136,11 +151,11 @@ export default function ServicesSection() {
                 relative
                 min-h-[190px]
                 overflow-hidden
-                bg-black
+                bg-[#0b0812]
                 p-7
-                transition-colors
+                transition-all
                 duration-500
-                hover:bg-purple-500/[0.035]
+                hover:bg-purple-500/[0.045]
               "
             >
               {/* Top */}
@@ -149,7 +164,7 @@ export default function ServicesSection() {
                   className="
                     text-[10px]
                     tracking-[0.3em]
-                    text-purple-300/50
+                    text-purple-300/70
                     transition-colors
                     duration-300
                     group-hover:text-purple-300
@@ -158,13 +173,13 @@ export default function ServicesSection() {
                   {service.number}
                 </span>
 
-                {/* Small chapter marker */}
+                {/* Chapter marker */}
                 <span
                   className="
                     h-1.5
                     w-1.5
                     rounded-full
-                    bg-purple-400/30
+                    bg-purple-400/40
                     transition-all
                     duration-500
                     group-hover:scale-150
@@ -181,7 +196,7 @@ export default function ServicesSection() {
                   text-lg
                   font-medium
                   tracking-tight
-                  text-white/90
+                  text-white
                   transition-colors
                   duration-300
                   group-hover:text-purple-200
@@ -196,10 +211,10 @@ export default function ServicesSection() {
                   max-w-sm
                   text-sm
                   leading-6
-                  text-white/35
+                  text-white/55
                   transition-colors
                   duration-300
-                  group-hover:text-white/50
+                  group-hover:text-white/70
                 "
               >
                 {service.description}
@@ -232,7 +247,7 @@ export default function ServicesSection() {
                   h-32
                   w-32
                   rounded-full
-                  bg-purple-500/[0.07]
+                  bg-purple-500/[0.08]
                   opacity-0
                   blur-3xl
                   transition-opacity
@@ -252,7 +267,7 @@ export default function ServicesSection() {
             text-[10px]
             uppercase
             tracking-[0.35em]
-            text-purple-300/20
+            text-purple-300/30
           "
         >
           built to evolve · made to last

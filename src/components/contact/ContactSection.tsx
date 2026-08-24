@@ -46,7 +46,7 @@ export default function ContactSection() {
       <section
         id="contact"
         onMouseMove={handleMouseMove}
-        className="relative overflow-hidden px-6 py-40"
+        className="relative overflow-hidden px-6 py-36"
       >
         {/* Background */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -95,7 +95,7 @@ export default function ContactSection() {
             "
           />
 
-          {/* Hero-style stars */}
+          {/* Stars */}
           {stars.map((star, index) => (
             <motion.span
               key={index}
@@ -182,13 +182,13 @@ export default function ContactSection() {
             transition={{ duration: 0.6 }}
             className="flex items-center justify-center gap-3"
           >
-            <span className="h-px w-8 bg-purple-400/30" />
+            <span className="h-px w-8 bg-purple-400/40" />
 
-            <p className="text-xs uppercase tracking-[0.4em] text-purple-300/80">
-              Let's work together
+            <p className="text-xs uppercase tracking-[0.4em] text-purple-300/90">
+              Let&apos;s work together
             </p>
 
-            <span className="h-px w-8 bg-purple-400/30" />
+            <span className="h-px w-8 bg-purple-400/40" />
           </motion.div>
 
           {/* Heading */}
@@ -211,7 +211,7 @@ export default function ContactSection() {
               lg:text-7xl
             "
           >
-            Let's create
+            Let&apos;s create
 
             <span
               className="
@@ -224,7 +224,7 @@ export default function ContactSection() {
                 text-transparent
               "
             >
-              what's next.
+              what&apos;s next.
             </span>
           </motion.h2>
 
@@ -246,7 +246,7 @@ export default function ContactSection() {
               text-zinc-400
             "
           >
-            I'm always open to interesting projects, creative collaborations,
+            I&apos;m always open to interesting projects, creative collaborations,
             and opportunities to turn good ideas into meaningful digital
             experiences.
           </motion.p>
@@ -270,7 +270,7 @@ export default function ContactSection() {
               sm:flex-row
             "
           >
-            {/* Same primary style as Hero */}
+            {/* Primary */}
             <a
               href="mailto:nikitabaraiya22@gmail.com"
               className="
@@ -298,7 +298,7 @@ export default function ContactSection() {
               />
             </a>
 
-            {/* Same secondary style as Hero */}
+            {/* Secondary */}
             <a
               href="https://drive.google.com/file/d/1np2zdtkf_jtIwYu9nNCJk7xSYIFFaF9V/view?usp=sharing"
               target="_blank"
@@ -310,8 +310,8 @@ export default function ContactSection() {
                 gap-3
                 rounded-full
                 border
-                border-white/10
-                bg-white/5
+                border-white/15
+                bg-white/[0.06]
                 px-7
                 py-3.5
                 font-medium
@@ -331,7 +331,7 @@ export default function ContactSection() {
             </a>
           </motion.div>
 
-          {/* Subtle BTS-inspired closing detail */}
+          {/* Editorial closing detail */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -342,13 +342,13 @@ export default function ContactSection() {
             }}
             className="
               mt-14
-              text-[10px]
-              uppercase
-              tracking-[0.42em]
-              text-purple-300/25
+              font-editorial-italic
+              text-xl
+              text-purple-200/55
+              sm:text-2xl
             "
           >
-            together, into what's next
+            together, into what&apos;s next.
           </motion.p>
         </div>
       </section>

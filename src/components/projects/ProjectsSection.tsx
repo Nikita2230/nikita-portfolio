@@ -133,7 +133,7 @@ export default async function ProjectsSection() {
               </span>
             </h2>
 
-            <p className="mt-6 max-w-xl text-base leading-7 text-white/45">
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/55">
               A collection of websites and digital experiences shaped through
               ideas, collaboration, and thoughtful development.
             </p>
