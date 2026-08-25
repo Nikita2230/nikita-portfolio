@@ -70,7 +70,7 @@ export default function Footer() {
         <div className="flex items-center gap-2 sm:gap-3">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/91YOURNUMBER"
+            href="https://wa.me/918237782210"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="WhatsApp"
