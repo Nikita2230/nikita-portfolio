@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${cormorant.variable}`}>{children}</body>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>{children}<Analytics/></body>
     </html>
   );
 }
