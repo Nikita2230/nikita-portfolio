@@ -300,7 +300,7 @@ export default function ContactSection() {
 
             {/* Secondary */}
             <a
-              href="https://drive.google.com/file/d/1np2zdtkf_jtIwYu9nNCJk7xSYIFFaF9V/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ykMFBFcNMvBQ0KIxvMIXFARP59beCpCQ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="
